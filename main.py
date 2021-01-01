@@ -5,18 +5,18 @@ from base64 import b64encode, b64decode
 
 
 inter='''
-Tsociety toolkit
+   <Tsociety toolkit>
+<made by themobilehacker>
+          ___
+         |   |
+        _|___|_
+       /#######\ 
+      |-+-###-+-|
+      |#########|
+       \#\___/#/
+        \#####/
 
-      ___
-     |   |
-    _|___|_
-   /#######\ 
-  |-+-###-+-|
-  |#########|
-   \#\___/#/
-    \#####/
-
-1)Info gathering
+1)Info tools
 2)Password tools
 3)Stress tools
 4)file encrypter
@@ -112,21 +112,278 @@ def stresstools():
 			os.system('python2 tools/FR.py %s'%web)
 		elif c==99:
 			break
+
+
+
 def entro():
 	print("if none enter 'null'.")
 	na=input('input filename>')
 	f=open(na,"w+")
 	v1={input('birthyear last two digits>'),input('name or person>'),input('name of person in relationship>'),input('pet name>'),input('closest relative>'),input('best friend>'),input('another important word>'),input('another important number>')}
 	t = 0
-	 
+	f.write('123456') 
 	fa=open(na,'a')
-
+	fa.write('''123456789
+picture1
+password
+12345678
+111111
+123123
+12345
+1234567890
+senha
+senpai
+senpi
+1234567
+qwerty
+abc123
+Million2
+000000
+1234
+iloveyou
+ilikeyou
+iloveu
+ilikeu
+aaron431
+aron431
+password1
+qqww1122
+123
+omgpop
+123321
+654321
+qwertyuiop
+qwerty123456
+123456a
+a123456
+666666
+123456seven
+asdfghjkl
+ashley
+987654321
+unkown
+'unknown
+zxcvbnm
+112233
+chatbooks
+20100728
+123123123
+princess
+jacket025
+evite
+123abc
+123qwe
+sunshine
+121212
+dragon
+1q2w3e4r
+5201314
+159753
+0123456789
+pokemon
+qwerty123
+Bangbang123
+johnbandtalent
+monkey
+1qaz2wsx
+abcd1234
+default
+aaaaaa
+soccer
+123654
+dick
+blowjob
+fuckyou
+fucku
+micheal
+michealafton
+killer
+trustno1
+jordan
+gordon
+hunter
+buster
+soccer
+batman
+andrew
+fuckme
+harley
+2000
+1985
+1986
+1987
+1988
+1989
+1990
+1991
+1992
+1993
+1994
+1995
+1996
+1997
+1998
+1999
+2001
+2002
+2003
+2004
+2005
+2006
+2007
+2008
+2009
+2010
+2011
+2012
+2013
+2014
+2015
+2016
+2017
+2018
+2019
+2020
+2021
+2022
+charlie
+robert
+thomas
+hockey
+ranger
+daniel
+starwars
+klaster
+george
+asshole
+asshat
+computer
+michelle
+jessica
+pepper
+1111
+zxcvbnm
+555555
+131313
+freedom
+7777777
+puss
+fuckmemaggie
+aaaaaa
+ginger
+princess
+joshua
+cheese
+amanda
+summer
+love
+ashley
+nicole
+chelsea
+biteme
+matthew
+access
+yankees
+dallas
+austiun
+thunder
+taylor
+matrix
+william
+williamafton
+corvette
+hello
+martin
+heather
+secret
+fucker
+merlin
+diamond
+1234qwer
+gfhjkm
+hammer
+silver
+2222222
+anthony
+justin
+themobilehacker
+biromantic2020
+biromantic
+asextual
+test
+bailey
+patrick
+internet
+scooter
+orange
+111111
+golfer
+cookie
+richard
+samantha
+bigdong
+bigdoggo
+guitar
+jackson
+whatever
+whateverdawg
+mickey
+mickeymouse
+chicken
+sparky
+snoopy
+maverick
+pheonix
+camero
+sexy
+peanut
+morgan
+welcome
+falcon
+cowboy
+ferrari
+samsung
+anderea
+smokey
+smokeythebear
+smokeybear
+steelers
+america
+noyhing
+parker
+4444
+rebecca
+qweqwe
+69696969
+jacks
+asdasd
+asdedasded
+december
+november
+magic
+apollo
+skippy
+parrot
+parrotos
+timcat
+godzilla
+brooklyn
+bullshit
+loveme
+saturn
+therock
+rockdwayne
+redwings
+bigboy
+pumpkin
+williams
+''')
 
 def kitpasscrack():
 	hashf=input('hash file>')
 	hashsalt=input('hash salt>')
 	dic=input('password list file>')
-	os.system('python2 kitcrack.py -f %s'%hashf+' -s %s'%hashsalt+' -d %s'%dic)
+	os.system('python2 tools/kitcrack.py -f %s'%hashf+' -s %s'%hashsalt+' -d %s'%dic)
 def passtools():
 	passinter='''
 1)crunch
@@ -570,7 +827,6 @@ while True:
 				decrypt(filename,key)
 			elif en==3:
 				break
-
 	elif c==99:
 		break
 		sys.exit()

@@ -1,30 +1,30 @@
 import sys,time,optparse,hashlib
 author="""
-Tsociety
-Kit Password Cracker
-     ___
-    |   |
-   _|___|_
-  /#######\ 
- |-+-###-+-|
- |#########|
-  \#\___/#/
-   \#####/
+      <Tsociety>
+<Kit Password Cracker>
+         ___
+        |   |
+       _|___|_
+      /#######\ 
+     |-+-###-+-|
+     |#########|
+      \#\___/#/
+       \#####/
 """
 Version="%prog 0.7"
 usage = "usage: %prog [options] "
 print(author)
 
-class hash_crack_engine:
+class kit_crack_engine:
  def __init__(self):
   self.starttime = time.time()
   self.extract_input_data()
-  self.open_and_get_file_data()
+  self.openandgetup()
   self.start_cracking_engine()
   self.closetime = time.time()
   self.close_all_process()
   
- def encrypt_salt(self, string):
+ def encrypt(self, string):
   if self.salt=="md5":
    return hashlib.md5(string).hexdigest()
   if self.salt=="sha1":
@@ -41,9 +41,9 @@ class hash_crack_engine:
  def start_cracking_engine(self):
   self.got_hash = []
   for i in self.words:
-   if self.encrypt_salt(i.strip("\n")) in self.hashlist:
-    print "[+] Hash Cracked! {} = {}".format(i.strip('\n'), self.encrypt_salt(i.strip("\n")))
-    self.result.write(" {} : {}\n".format(i.strip('\n'), self.encrypt_salt(i.strip("\n"))))
+   if self.encrypt(i.strip("\n")) in self.hashlist:
+    print "[+] Hash Cracked! {} = {}".format(i.strip('\n'), self.encrypt(i.strip("\n")))
+    self.result.write(" {} : {}\n".format(i.strip('\n'), self.encrypt(i.strip("\n"))))
     self.got_hash.append(i.strip("\n"))
     if len(self.got_hash)==len(self.hashlist):
      break
@@ -64,8 +64,8 @@ class hash_crack_engine:
   print "[+] Extracting Input Data..."
   self.filename=option.filename
   self.dictionery=option.dictionery
-  self.output = option.output
-  self.salt = option.salt
+  self.output=option.output
+  self.salt=option.salt
   
   if not self.salt:
    print "[+] Please Provide Hash Salts."
@@ -86,7 +86,7 @@ class hash_crack_engine:
    sys.exit(0)
   return
 
- def open_and_get_file_data(self):
+ def openandgetup(self):
   hashlist = open(self.filename,'r')
   wordlist = open(self.dictionery,'r')  
   self.hashlist = [i.strip('\n') for i in hashlist.xreadlines()] 
@@ -100,11 +100,10 @@ class hash_crack_engine:
   return
   
  def time_management(self):
-  print "[*] Starting Time:",self.starttime
-  print "[*] Closing  Time:",self.closetime
-  print "[*] Password Try:",self.pwdtries
-  print "[*] Average Speed:",self.pwdtries/(self.closetime-self.starttime)
+  print "Time Taken:",self.closetime-self.starttime
+  print "Tries:",self.pwdtries
+  print "Speed:",self.pwdtries/(self.closetime-self.starttime)
   return
 
 if __name__=="__main__":
- hash_crack_engine()
+ kit_crack_engine()
