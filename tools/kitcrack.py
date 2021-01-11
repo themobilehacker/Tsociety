@@ -61,28 +61,28 @@ class kit_crack_engine:
   parser.add_option("-s", "--salt", action="store", type="string", dest="salt", help="Please Provide Hash Salt. ex: md5, sha1, sha256, sha512", default=None)
   (option, args)=parser.parse_args()
 
-  print "[+] Extracting Input Data..."
+  print "Extracting input data..."
   self.filename=option.filename
   self.dictionery=option.dictionery
   self.output=option.output
   self.salt=option.salt
   
   if not self.salt:
-   print "[+] Please Provide Hash Salts."
+   print "Please provide Hash Salts"
    sys.exit(0)
   if self.salt not in hashlib.algorithms:
-   print "[+] Please Provide Valid Salt. \n\t\tEx : {}".format(hashlib.algorithms)
+   print "Please provide an actual Hash Salt. \n\t\tEx : {}".format(hashlib.algorithms)
    sys.exit(0)
 
   if not self.filename:
-   print "[+] Please Provide Hash File."
+   print "Please Provide Hash File."
    sys.exit(0)
   
   if not self.dictionery:
-   print "[+] Please Provide Password Source."
+   print "Please Provide Password Source."
    sys.exit(0)
   if not self.output:
-   print "[+] Please Provide Output Path."
+   print "Please Provide Output Path."
    sys.exit(0)
   return
 
