@@ -304,29 +304,16 @@ def benchmarkc16000():
 	
 def benchmark():
 	print("starting benchmark...")
-	starttime1 = time.time()
+	starttime=time.time()
 	benchmarkc16000()
 	benchmarkc16000()
 	benchmarkc16000()
-	endtime1 = time.time()
-	starttime2 = time.time()
-	key = load_key()
-	encrypt("b.dat", key)
-	encrypt("b.dat", key)
-	encrypt("b.dat", key)
-	encrypt("b.dat", key)
-	encrypt("b.dat", key)
-	decrypt("b.dat", key)
-	decrypt("b.dat", key)
-	encrypt("b.dat", key)
-	decrypt("b.dat", key)
-	decrypt("b.dat", key)
-	decrypt("b.dat", key)
-	decrypt("b.dat", key)
-	endtime2 = time.time()
-	time1 = endtime1 - starttime1
-	time2 = endtime2 - starttime2
-	totaltime = time1 + time2 
+	benchmarkc16000()
+	benchmarkc16000()
+	benchmarkc16000()
+	benchmarkc16000()
+	endtime=time.time()
+	totoaltime=endtime-starttime
 	if totaltime <= 1.9:
 		scoretime = totaltime + 0.1
 		total = 85000 - scoretime * 450
