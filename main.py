@@ -23,8 +23,7 @@ inter='''
 0)Update toolkit (still in developent)
 99)exit
 >'''
-intr='''---------------------------
---Tsociety file encrypter--
+intr='''--Tsociety file encrypter--
 1)encrypt
 2)decrypt
 99)exit
@@ -1517,7 +1516,7 @@ while True:
 				enc(key())
 			elif en==2:
 				dec(key())
-			elif c==99:
+			elif en==99:
 				break
 			else:
 				print('please input a number shown')
