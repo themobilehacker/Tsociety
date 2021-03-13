@@ -37,6 +37,10 @@ echo $FR >> ~/.bashrc
 echo $FR >> ~/.bash_profile
 echo $FR >> ~/.zshrc
 echo $FR >> ~/.zsh_profile
+echo $HULK >> ~/.bashrc
+echo $HULK >> ~/.bash_profile
+echo $HULK >> ~/.zshrc
+echo $HULK >> ~/.zsh_profile
 
 pip install -r requirements.txt
 pip3 install -r requirements.txt
