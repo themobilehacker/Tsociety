@@ -15,7 +15,7 @@ random,
 hashlib,
 getpass,
 binascii,
-cryptography
+pyAesCrypt
 
 WARNING: The added M1 repository contains malware and viruses meant for research purposes only, do not use irresponsibly.
 
