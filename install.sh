@@ -45,3 +45,4 @@ echo $HULK >> ~/.zsh_profile
 pip install -r requirements.txt
 pip3 install -r requirements.txt
 echo '***done installing***'
+echo 'run the toolkit by typing: tsociety'
