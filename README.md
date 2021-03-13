@@ -19,4 +19,4 @@ pyAesCrypt
 
 WARNING: The added M1 repository contains malware and viruses meant for research purposes only, do not use irresponsibly.
 
-Version 0.3.1
+Version 0.3.4
